@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ranjeet Karmakar</title>
+    <title>Ranjeet Karmakar | Code. Consult. Create.</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- GSAP for animations -->
@@ -19,7 +20,7 @@
         })();
     </script>
     <!-- Custom styles -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body class="gradient-bg min-h-screen text-gray-200 font-sans">
     <!-- Navigation -->
@@ -61,7 +62,7 @@
                 Hi, I'm Ranjeet Karmakar
             </h1>
             <p class="text-xl md:text-2xl mb-8 opacity-0" id="hero-subtitle">
-                Software Developer | Creative Problem Solver
+                Engineer of code, consultant of ideas, builder of possibilities.
             </p>
             <div class="space-x-4 opacity-0" id="hero-cta">
                 <a href="#projects" class="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-purple-100 transition-colors">
@@ -90,9 +91,8 @@
                     of modern development practices.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    I believe in writing clean, maintainable code and creating intuitive user experiences.
-                    When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                    or sharing knowledge with the developer community.
+                    I write clean, maintainable code and love crafting smooth, intuitive user experiences.
+                    When I'm not coding, you'll probably find me experimenting with new tech, gaming, traveling, vibing to music, or cruising on two wheels.
                 </p>
             </div>
         </div>
@@ -109,71 +109,54 @@
             <h2 class="text-4xl font-bold mb-12 text-center">Skills</h2>
             <div class="w-full overflow-x-hidden relative" style="overflow-x:hidden;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;">
                 <div class="absolute inset-0 h-full w-full glass-effect" style="z-index:0;"></div>
-                <div id="skills-slider" class="flex items-center py-4 relative" style="will-change:transform;z-index:1;gap:4vw;">
+                <div id="skills-slider" class="flex items-center py-8 relative flex-nowrap" style="will-change:transform;z-index:1;gap:4vw;white-space:nowrap;">
                     <span class="flex items-center">
-                        <i class="fab fa-js text-yellow-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">JavaScript</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_.NET_logo.png" alt=".NET" style="height:1.8rem;width:1.8rem;">
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">C# / .NET / .NET Core</span>
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-database text-purple-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Stored Procedures / SQL</span>
+                    </span>
+                    <span class="flex items-center">
+                        <img src="assets/img/sitecore.png" alt="Sitecore" style="height:1.8rem;width:1.8rem;">
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Sitecore</span>
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-project-diagram text-green-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">.NET MVC / .NET Web API / Microservices</span>
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fab fa-angular text-red-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Angular</span>
                     </span>
                     <span class="flex items-center">
                         <i class="fab fa-react text-cyan-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">React</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-node text-green-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Node.js</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-python text-blue-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Python</span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">React</span>
                     </span>
                     <span class="flex items-center">
                         <i class="fab fa-html5 text-orange-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">HTML5</span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">HTML / CSS</span>
                     </span>
                     <span class="flex items-center">
-                        <i class="fab fa-css3-alt text-blue-300" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">CSS3</span>
+                        <i class="fas fa-database text-green-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Entity Framework / LINQ</span>
                     </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-git-alt text-red-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Git</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-aws text-orange-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">AWS</span>
-                    </span>
-                    <!-- Repeat for infinite effect -->
                     <span class="flex items-center">
                         <i class="fab fa-js text-yellow-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">JavaScript</span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">JavaScript / jQuery</span>
                     </span>
                     <span class="flex items-center">
-                        <i class="fab fa-react text-cyan-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">React</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-node text-green-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Node.js</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-python text-blue-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Python</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-html5 text-orange-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">HTML5</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-css3-alt text-blue-300" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">CSS3</span>
+                        <img src="assets/img/azure.png" alt="Azure" style="height:1.8rem;width:1.8rem;">
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Azure / Azure DevOps</span>
                     </span>
                     <span class="flex items-center">
                         <i class="fab fa-git-alt text-red-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Git</span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">GIT</span>
                     </span>
                     <span class="flex items-center">
-                        <i class="fab fa-aws text-orange-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">AWS</span>
+                        <i class="fab fa-python text-blue-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Python</span>
                     </span>
                 </div>
             </div>
@@ -400,6 +383,6 @@
     </footer>
 
     <!-- Custom JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.min.js"></script>
 </body>
 </html>
