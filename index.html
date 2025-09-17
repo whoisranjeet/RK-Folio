@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ranjeet Karmakar</title>
+    <title>Ranjeet Karmakar | Code. Consult. Create.</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- GSAP for animations -->
@@ -19,64 +20,7 @@
         })();
     </script>
     <!-- Custom styles -->
-    <style>
-        body.gradient-bg {
-            background: linear-gradient(-45deg, #232526, #414345, #1a1a2e, #0f2027);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .glass-effect {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .section-bg {
-            position: relative;
-            z-index: 1;
-        }
-        .section-bg svg {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-        .section-content {
-            position: relative;
-            z-index: 2;
-        }
-        .gradient-strip-bg {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            opacity: 0.7;
-        }
-        .project-card {
-            transition: transform 0.18s cubic-bezier(.22,.68,.43,1.01), box-shadow 0.18s cubic-bezier(.22,.68,.43,1.01);
-            will-change: transform, box-shadow;
-        }
-        .project-card.hovered {
-            box-shadow: 0 8px 32px 0 rgba(168,85,247,0.18), 0 2px 8px 0 rgba(52,211,153,0.12);
-            z-index: 2;
-            transform: scale(1.035);
-        }
-        .go-top-tilt {
-            transition: transform 0.18s cubic-bezier(.22,.68,.43,1.01), box-shadow 0.18s cubic-bezier(.22,.68,.43,1.01);
-            will-change: transform, box-shadow;
-            background: linear-gradient(135deg, #232526 70%, #1a1a2e 100%);
-            border: 1px solid rgba(168,85,247,0.13);
-        }
-        .go-top-tilt.hovered {
-            box-shadow: 0 16px 48px 0 rgba(168,85,247,0.28), 0 4px 16px 0 rgba(52,211,153,0.22);
-            z-index: 2;
-            transform: scale(1.18) rotateX(var(--rotateX,0deg)) rotateY(var(--rotateY,0deg));
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body class="gradient-bg min-h-screen text-gray-200 font-sans">
     <!-- Navigation -->
@@ -118,7 +62,7 @@
                 Hi, I'm Ranjeet Karmakar
             </h1>
             <p class="text-xl md:text-2xl mb-8 opacity-0" id="hero-subtitle">
-                Software Developer | Creative Problem Solver
+                Engineer of code, consultant of ideas, builder of possibilities.
             </p>
             <div class="space-x-4 opacity-0" id="hero-cta">
                 <a href="#projects" class="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-purple-100 transition-colors">
@@ -147,9 +91,8 @@
                     of modern development practices.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    I believe in writing clean, maintainable code and creating intuitive user experiences.
-                    When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                    or sharing knowledge with the developer community.
+                    I write clean, maintainable code and love crafting smooth, intuitive user experiences.
+                    When I'm not coding, you'll probably find me experimenting with new tech, gaming, traveling, vibing to music, or cruising on two wheels.
                 </p>
             </div>
         </div>
@@ -160,78 +103,61 @@
         <svg viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg">
             <polygon points="400,60 600,120 500,200" fill="#23a6d5" fill-opacity="0.08" />
             <rect x="900" y="40" width="120" height="120" rx="30" fill="#ee7752" fill-opacity="0.07" />
-            <text x="100" y="300" font-size="28" fill="#fff" fill-opacity="0.07">const skills = ['JS', 'React', 'Node', 'Python'];</text>
+            <text x="100" y="300" font-size="28" fill="#fff" fill-opacity="0.07">const skills = ['C#', '.NET', 'Sitecore', 'SQL', 'Azure', 'GIT'];</text>
         </svg>
         <div class="mx-auto section-content">
             <h2 class="text-4xl font-bold mb-12 text-center">Skills</h2>
             <div class="w-full overflow-x-hidden relative" style="overflow-x:hidden;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;">
                 <div class="absolute inset-0 h-full w-full glass-effect" style="z-index:0;"></div>
-                <div id="skills-slider" class="flex items-center py-4 relative" style="will-change:transform;z-index:1;gap:4vw;">
-                    <span class="flex items-center">
-                        <i class="fab fa-js text-yellow-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">JavaScript</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-react text-cyan-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">React</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-node text-green-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Node.js</span>
-                    </span>
-                    <span class="flex items-center">
+                <div id="skills-slider" class="flex items-center py-8 relative flex-nowrap" style="will-change:transform;z-index:1;gap:4vw;white-space:nowrap;">
+                    <span class="flex items-center min-w-fit">
                         <i class="fab fa-python text-blue-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Python</span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Python</span>
                     </span>
-                    <span class="flex items-center">
+                    <span class="flex items-center min-w-fit">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_.NET_logo.png" alt=".NET" style="height:1.8rem;width:1.8rem;">
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">C# / .NET / .NET Core</span>
+                    </span>
+                    <span class="flex items-center min-w-fit">
+                        <i class="fas fa-project-diagram text-green-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">.NET MVC / .NET Web API / Microservices</span>
+                    </span>
+                    <span class="flex items-center min-w-fit">
+                        <i class="fas fa-database text-green-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Entity Framework / LINQ</span>
+                    </span>
+                    <span class="flex items-center min-w-fit">
+                        <i class="fas fa-database text-purple-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Stored Procedures / SQL</span>
+                    </span>
+                    <span class="flex items-center min-w-fit">
+                        <img src="assets/img/sitecore.png" alt="Sitecore" style="height:1.8rem;width:1.8rem;">
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Sitecore</span>
+                    </span>            
+                     <span class="flex items-center min-w-fit">
                         <i class="fab fa-html5 text-orange-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">HTML5</span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">HTML / CSS</span>
+                    </span>        
+                    <span class="flex items-center min-w-fit">
+                        <i class="fab fa-angular text-red-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Angular</span>
                     </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-css3-alt text-blue-300" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">CSS3</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-git-alt text-red-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Git</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-aws text-orange-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">AWS</span>
-                    </span>
-                    <!-- Repeat for infinite effect -->
-                    <span class="flex items-center">
-                        <i class="fab fa-js text-yellow-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">JavaScript</span>
-                    </span>
-                    <span class="flex items-center">
+                    <span class="flex items-center min-w-fit">
                         <i class="fab fa-react text-cyan-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">React</span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">React</span>
+                    </span>             
+                    <span class="flex items-center min-w-fit">
+                        <i class="fab fa-js text-yellow-400" style="font-size:1.8rem;"></i>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">JavaScript / jQuery</span>
                     </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-node text-green-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Node.js</span>
+                    <span class="flex items-center min-w-fit">
+                        <img src="assets/img/azure.png" alt="Azure" style="height:1.8rem;width:1.8rem;">
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">Azure / Azure DevOps</span>
                     </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-python text-blue-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Python</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-html5 text-orange-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">HTML5</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-css3-alt text-blue-300" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">CSS3</span>
-                    </span>
-                    <span class="flex items-center">
+                    <span class="flex items-center min-w-fit">
                         <i class="fab fa-git-alt text-red-500" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">Git</span>
-                    </span>
-                    <span class="flex items-center">
-                        <i class="fab fa-aws text-orange-400" style="font-size:1.8rem;"></i>
-                        <span class="ml-3 text-base font-semibold">AWS</span>
-                    </span>
+                        <span class="ml-3 text-base font-semibold whitespace-nowrap">GIT</span>
+                    </span>                    
                 </div>
             </div>
         </div>
@@ -325,54 +251,13 @@
                             </div>
                         </div>
                         <!-- Center fixed Hire Me button -->
-                        <button class="-translate-x-1/2 -translate-y-1/2 absolute bg-green-400 flex font-bold gap-2 hover:scale-105 items-center left-1/2 px-6 py-3 rounded-xl shadow-lg text-gray-900 top-1/2 transform transition-transform" style="z-index:3;">
+                        <button id="hireMeBtn" class="-translate-x-1/2 -translate-y-1/2 absolute bg-green-400 flex font-bold gap-2 hover:scale-105 items-center left-1/2 px-6 py-3 rounded-xl shadow-lg text-gray-900 top-1/2 transform transition-transform" style="z-index:3;">
                             <i class="fas fa-briefcase"></i> Hire Me
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <style>
-            @keyframes collab-rotate {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-            }
-            .collab-icon-label {
-                font-size: 0.9rem;
-                font-weight: 600;
-                letter-spacing: 0.04em;
-            }
-            .collab-icon {
-                font-size: 1.2rem;
-                margin-bottom: 0.2rem;
-            }
-            #collaborate h2 {
-                font-size: 2.5rem;
-            }
-            #collaborate p {
-                font-size: 1.15rem;
-            }
-            #collaborate .h-1 {
-                height: 0.22rem;
-            }
-            #collaborate .px-8 {
-                padding-left: 2.2rem;
-                padding-right: 2.2rem;
-            }
-            #collaborate .py-4 {
-                padding-top: 1.1rem;
-                padding-bottom: 1.1rem;
-            }
-        </style>
-        <script>
-            // Animate the rotator group
-            document.addEventListener('DOMContentLoaded', function() {
-                const rotator = document.getElementById('collab-rotator');
-                if(rotator) {
-                    rotator.style.animation = 'collab-rotate 18s linear infinite';
-                }
-            });
-        </script>
     </section>
 
     <!-- Projects Section -->
@@ -387,59 +272,25 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
                 <div class="glass-effect rounded-xl overflow-hidden project-card">
-                    <img src="ProjectImg.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                    <img src="" alt="Project 1" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Name</h3>
-                        <p class="text-gray-300 mb-4">Description of the project goes here. Explaining the technologies used and the problem solved.</p>
+                        <h3 class="text-xl font-bold mb-2">Engage360</h3>
+                        <p class="text-gray-300 mb-4 project-desc" title="A feature-rich employee portal built with .NET Core MVC, Razor Pages, and Entity Framework. Includes role-based access, payroll management, social feed, image uploads, infinite scrolling, Google Sign-In, Gmail integration, PDF generation, and AJAX-powered interactions. Designed with Bootstrap for full responsiveness and a smooth user experience across devices.">A feature-rich employee portal built with .NET Core MVC, Razor Pages, and Entity Framework. Includes role-based access...</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fab fa-github mr-2"></i>Code</a>
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fas fa-external-link-alt mr-2"></i>Demo</a>
+                            <a href="https://github.com/whoisranjeet/Engage360" target="_blank" class="text-sm hover:text-purple-300"><i class="fab fa-github mr-2"></i>Code</a>
+                            <a href="https://engage360rk.azurewebsites.net/" target="_blank" class="text-sm hover:text-purple-300"><i class="fas fa-external-link-alt mr-2"></i>Demo</a>
                         </div>
                     </div>
                 </div>
                 <!-- Project Card 2 -->
                 <div class="glass-effect rounded-xl overflow-hidden project-card">
-                    <img src="ProjectImg.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <img src="" alt="Project 2" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Name</h3>
-                        <p class="text-gray-300 mb-4">Description of the project goes here. Explaining the technologies used and the problem solved.</p>
+                        <h3 class="text-xl font-bold mb-2">Pi</h3>
+                        <p class="text-gray-300 mb-4 project-desc" title="A responsive scientific calculator built using HTML, CSS, JavaScript, and Bootstrap. It supports key scientific functions and ensures smooth performance across all device sizes with a clean, mobile-friendly interface.">A responsive scientific calculator built using HTML, CSS, JavaScript, and Bootstrap...</p>
                         <div class="flex space-x-4">
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fab fa-github mr-2"></i>Code</a>
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fas fa-external-link-alt mr-2"></i>Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="glass-effect rounded-xl overflow-hidden project-card">
-                    <img src="ProjectImg.jpg" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Name</h3>
-                        <p class="text-gray-300 mb-4">Description of the project goes here. Explaining the technologies used and the problem solved.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fab fa-github mr-2"></i>Code</a>
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fas fa-external-link-alt mr-2"></i>Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-effect rounded-xl overflow-hidden project-card">
-                    <img src="ProjectImg.jpg" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Name</h3>
-                        <p class="text-gray-300 mb-4">Description of the project goes here. Explaining the technologies used and the problem solved.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fab fa-github mr-2"></i>Code</a>
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fas fa-external-link-alt mr-2"></i>Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-effect rounded-xl overflow-hidden project-card">
-                    <img src="ProjectImg.jpg" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Project Name</h3>
-                        <p class="text-gray-300 mb-4">Description of the project goes here. Explaining the technologies used and the problem solved.</p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fab fa-github mr-2"></i>Code</a>
-                            <a href="#" class="text-sm hover:text-purple-300"><i class="fas fa-external-link-alt mr-2"></i>Demo</a>
+                            <a href="https://github.com/whoisranjeet/Pi" target="_blank" class="text-sm hover:text-purple-300"><i class="fab fa-github mr-2"></i>Code</a>
+                            <a href="https://www.pi.builtbyrk.com/" target="_blank" class="text-sm hover:text-purple-300"><i class="fas fa-external-link-alt mr-2"></i>Demo</a>
                         </div>
                     </div>
                 </div>
@@ -461,20 +312,20 @@
                 <form id="contact-form" class="space-y-6">
                     <div>
                         <label class="block mb-2">Name</label>
-                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white">
+                        <input type="text" id="name" name="name" required placeholder="Enter your name" class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white">
                     </div>
                     <div>
                         <label class="block mb-2">Email</label>
-                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white">
+                        <input type="email" id="email" name="email" required placeholder="Enter your email" class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white">
                     </div>
                     <div>
                         <label class="block mb-2">Message</label>
-                        <textarea rows="4" id="message" name="message" required class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white"></textarea>
+                        <textarea rows="5" id="message" name="message" required placeholder="Enter your message" class="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-white" style="height:120px;resize:none;"></textarea>
                     </div>
                     <button type="submit" class="w-full bg-white text-gray-900 py-3 rounded-lg hover:bg-purple-100 transition-colors">
                         Send Message
                     </button>
-                    <div id="form-status" class="mt-4 text-center text-green-400 font-semibold" style="display:none;"></div>
+                    <!-- SweetAlert2 popup will show status instead of this element -->
                 </form>
             </div>
         </div>
@@ -489,142 +340,16 @@
     <footer class="py-8 text-center" style="background: linear-gradient(-45deg, #232526, #414345, #1a1a2e, #0f2027);">
         <div class="container mx-auto px-6">
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="hover:text-purple-300 transition-colors"><i class="fab fa-github text-2xl"></i></a>
-                <a href="#" class="hover:text-purple-300 transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
-                <a href="#" class="hover:text-purple-300 transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+                <a href="https://github.com/whoisranjeet" target="_blank" class="hover:text-purple-300 transition-colors"><i class="fab fa-github text-2xl"></i></a>
+                <a href="https://linkedin.com/in/whoisranjeet99/" target="_blank" class="hover:text-purple-300 transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="https://x.com/whoisranjeet99" target="_blank" class="hover:text-purple-300 transition-colors"><i class="fab fa-x-twitter text-2xl"></i></a>
             </div>
             <p>&copy; 2025 Ranjeet Karmakar. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Custom JavaScript -->
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        }
-
-        // GSAP Animations
-        document.addEventListener('DOMContentLoaded', () => {
-            gsap.to('#hero-title', { opacity: 1, y: 0, duration: 1, ease: 'power4.out' });
-            gsap.to('#hero-subtitle', { opacity: 1, y: 0, duration: 1, delay: 0.3, ease: 'power4.out' });
-            gsap.to('#hero-cta', { opacity: 1, y: 0, duration: 1, delay: 0.6, ease: 'power4.out' });
-            gsap.registerPlugin(ScrollTrigger);
-            gsap.utils.toArray('.project-card').forEach((card, i) => {
-                gsap.from(card, {
-                    scrollTrigger: { trigger: card, start: 'top bottom-=100', toggleActions: 'play none none reverse' },
-                    opacity: 0, y: 50, duration: 0.6, delay: i * 0.1
-                });
-            });
-        });
-
-        // Skills slider animation - seamless infinite scroll
-        (function() {
-            const slider = document.getElementById('skills-slider');
-            if (!slider) return;
-            const parent = slider.parentElement;
-            const minWidth = parent.offsetWidth * 2;
-            let totalWidth = slider.scrollWidth;
-            let clones = [];
-            while (totalWidth < minWidth) {
-                Array.from(slider.children).forEach(child => {
-                    const clone = child.cloneNode(true);
-                    clone.setAttribute('aria-hidden', 'true');
-                    slider.appendChild(clone);
-                    clones.push(clone);
-                });
-                totalWidth = slider.scrollWidth;
-            }
-            let sliderPosition = 0;
-            function animateSlider() {
-                sliderPosition -= 0.5;
-                if (Math.abs(sliderPosition) >= totalWidth / 2) sliderPosition = 0;
-                slider.style.transform = `translateX(${sliderPosition}px)`;
-                requestAnimationFrame(animateSlider);
-            }
-            animateSlider();
-        })();
-
-        // Go to Top Button logic
-        const goTopBtn = document.getElementById('goTopBtn');
-        window.addEventListener('scroll', () => {
-            goTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-        });
-        goTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Tilt effect for project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left, y = e.clientY - rect.top;
-                const centerX = rect.width / 2, centerY = rect.height / 2;
-                const rotateX = ((y - centerY) / centerY) * 6, rotateY = ((x - centerX) / centerX) * -6;
-                card.style.transform = `scale(1.035) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-                card.classList.add('hovered');
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-                card.classList.remove('hovered');
-            });
-            card.addEventListener('mouseenter', () => {
-                card.classList.add('hovered');
-            });
-        });
-
-        // Tilt effect for Go to Top button
-        goTopBtn.addEventListener('mousemove', e => {
-            const rect = goTopBtn.getBoundingClientRect();
-            const x = e.clientX - rect.left, y = e.clientY - rect.top;
-            const centerX = rect.width / 2, centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * 28, rotateY = ((x - centerX) / centerX) * -28;
-            goTopBtn.style.setProperty('--rotateX', `${rotateX}deg`);
-            goTopBtn.style.setProperty('--rotateY', `${rotateY}deg`);
-            goTopBtn.style.transform = `scale(1.18) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            goTopBtn.classList.add('hovered');
-        });
-        goTopBtn.addEventListener('mouseleave', () => {
-            goTopBtn.style.transform = '';
-            goTopBtn.classList.remove('hovered');
-        });
-        goTopBtn.addEventListener('mouseenter', () => {
-            goTopBtn.classList.add('hovered');
-        });
-
-        // EmailJS contact form handler
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const status = document.getElementById('form-status');
-            status.style.display = 'none';
-            // Get and trim values
-            let name = document.getElementById('name').value.trim();
-            let email = document.getElementById('email').value.trim();
-            let message = document.getElementById('message').value.trim();
-            // Capitalize first letter of name
-            if (name) name = name[0].toUpperCase() + name.slice(1);
-            // Sentence case for message
-            if (message) {
-                message = message.replace(/\s+/g, ' ');
-                message = message[0].toUpperCase() + message.slice(1);
-                message = message.replace(/([.!?]\s+)([a-z])/g, (m, p1, p2) => p1 + p2.toUpperCase());
-            }
-            emailjs.send('service_bvhsxhg', 'template_yzlxofp', {
-                from_name: name,
-                from_email: email,
-                message: message
-            })
-            .then(function() {
-                status.textContent = 'Message sent successfully!';
-                status.style.display = 'block';
-                status.style.color = '#4ade80';
-                document.getElementById('contact-form').reset();
-            }, function() {
-                status.textContent = 'Failed to send message. Please try again.';
-                status.style.display = 'block';
-                status.style.color = '#f87171';
-            });
-        });
-    </script>
+        <script src="assets/js/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
